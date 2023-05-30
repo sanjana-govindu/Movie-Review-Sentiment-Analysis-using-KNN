@@ -72,4 +72,12 @@ d. TF-IDF Weighted Word-to-Vec: Similar to Avg W2V, each word in a review is con
 
 In summary, the preprocessing steps involved removing HTML tags, punctuation, and special characters, checking word characteristics, converting to lowercase, removing stopwords, and applying stemming. The featurizations included Bag of Words, TF-IDF, Average Word-to-Vec, and TF-IDF Weighted Word-to-Vec. The data was split for evaluation, and different models were trained and tested.
 
+**K-nearest Algorithm**
+
+- Matrix generated from cosine similarity is taken and processed row by row.
+- Arrange columns of every row in the increasing order of similarity and take top ‘k’ indexes and values
+- Match the corresponding review with sentiment using indexes obtained above
+- Group all positives together and negatives together. If number of positives are more than the negative, then the corresponding test data point will be assigned ‘positive sentiment’ and vice-versa.
+- Output is written into the file.
+
 Datasets used: https://www.kaggle.com/c/sentiment-analysis-on-movie-reviews
