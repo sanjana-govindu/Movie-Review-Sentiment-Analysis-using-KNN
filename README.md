@@ -41,4 +41,34 @@ A practical application in e-commerce applications is to infer sentiment (or pol
     - SVD is used mostly for sparse data and reduces the dimensions by decreasing the input variables of dataset. Without SVD the accuracy is 0.85        and with SVD it is 0.798 and the runtime will be reduced if SVD is used.
   
   <img width="368" alt="image" src="https://github.com/sanjana-govindu/Movie-Review-Sentiment-Analysis-using-KNN/assets/54507596/70a910e1-d6da-4fdd-a75b-7210f3d682bc">
+  
+  
+  
+**During the pre-processing of the original dataset, the following steps were taken into consideration:**
+
+Positive and negative classification: Reviews with a score of 3 or 4 were classified as positive, while those with a score of 0 or 1 were classified as negative. Reviews with a score of 2 (considered neutral) were ignored for the time being. 
+
+Removal of duplicate entries: Duplicate reviews in the dataset were eliminated. Four featurizations for training: The final model was trained using four featurizations:
+
+a. Bag of Words (BoW): This approach converts words in reviews into vectors. Each unique word in the dataset becomes a dimension, and the count of each word in a review is placed in the corresponding dimension. This results in a sparse matrix representation of the words in the reviews.
+
+b. TF-IDF (Term Frequency-Inverse Document Frequency): TF calculates the frequency of a word in a review divided by the total number of words in that review. IDF calculates the rarity of a word across the entire corpus. The product of TF and IDF values is computed for each word in each review, resulting in a d-dimensional vector representation.
+
+c. Average Word-to-Vec (Avg W2V): Each word in a review is converted into a vector representation. The average vector of all the words in a review is computed.
+
+d. TF-IDF Weighted Word-to-Vec: Similar to Avg W2V, each word in a review is converted into a vector representation. The TF-IDF weighted average vector of all the words in a review is computed.
+
+**Preprocessing of reviews:** The reviews underwent several preprocessing steps:
+
+- Removal of HTML tags.
+- Removal of punctuations and limited special characters.
+- Checking if the word consists of English letters and is not alphanumeric.
+- Checking if the word length is greater than 2, as adjectives are not typically 2 letters long.
+- Conversion of words to lowercase.
+- Removal of stopwords.
+- Snowball Stemming, which is observed to be more effective than Porter Stemming
+- Splitting the data: After featurization, the data was split to assess the model's performance on unseen data
+- Training different models: Various models such as KNN, Naive Bayes, Logistic Regression, SVMs, Decision Tree, and Random Forest were trained and evaluated.
+
+In summary, the preprocessing steps involved removing HTML tags, punctuation, and special characters, checking word characteristics, converting to lowercase, removing stopwords, and applying stemming. The featurizations included Bag of Words, TF-IDF, Average Word-to-Vec, and TF-IDF Weighted Word-to-Vec. The data was split for evaluation, and different models were trained and tested.
 
