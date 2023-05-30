@@ -72,3 +72,4 @@ d. TF-IDF Weighted Word-to-Vec: Similar to Avg W2V, each word in a review is con
 
 In summary, the preprocessing steps involved removing HTML tags, punctuation, and special characters, checking word characteristics, converting to lowercase, removing stopwords, and applying stemming. The featurizations included Bag of Words, TF-IDF, Average Word-to-Vec, and TF-IDF Weighted Word-to-Vec. The data was split for evaluation, and different models were trained and tested.
 
+Datasets used: https://www.kaggle.com/c/sentiment-analysis-on-movie-reviews
