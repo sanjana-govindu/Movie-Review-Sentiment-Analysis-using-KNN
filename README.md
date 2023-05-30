@@ -9,6 +9,14 @@
 **Problem statement:**
 The assignment is about Movie review sentiment analysis. In this assignment, provided the training and test reviews along with the train sentiments. We had to implement the KNN classifier algorithm to predict the test sentiments for 18000 rows or reviews of data. Positive sentiments are represented +1 and negative sentiment are by -1. A test file will be provided in the assignment which can be used to compare with the predictions.
 
+**Detailed Description:**
+A practical application in e-commerce applications is to infer sentiment (or polarity) from free-form review text submitted for a range of products. This is to implement a k-Nearest Neighbor Classifier to predict the sentiment for 18,000 reviews for various products provided in the test file (test_file.csv). 
+- Positive sentiment is represented by a review rating of +1 and negative sentiment is represented by a review rating of -1. 
+- In the test file, we are only provided the reviews but no ground truth rating which will be used for comparing your predictions. 
+- Training data consists of 18000 reviews and exists in the file train_file.csv. 
+- Each row begins with the sentiment score followed by the text of the review.  
+- format.csv shows an example file containing 18000 rows alternating with +1 and -1.
+
 **APPROACH FOLLOWED:**
 1. Loaded the training dataset and the test data set into data frames using the read fwf in python. (Provided local file paths)
 2. Data has been preprocessed using various methods. The following process has been done in the preprocessing method:
@@ -34,4 +42,3 @@ The assignment is about Movie review sentiment analysis. In this assignment, pro
   
   <img width="368" alt="image" src="https://github.com/sanjana-govindu/Movie-Review-Sentiment-Analysis-using-KNN/assets/54507596/70a910e1-d6da-4fdd-a75b-7210f3d682bc">
 
-  
